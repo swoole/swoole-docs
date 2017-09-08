@@ -26,7 +26,7 @@ $http->on('request', function ($request, $response) {
 $http->start();
 ```
 
-To run the server, put the code into a file called server.php and execute it in the cli mode of php:
+To run the server, put the code into a file named server.php and execute it in the cli mode of php:
 
 ``` bash
 $ php server.php
