@@ -12,7 +12,6 @@ Swoole follows the same principle as [Node.js](https://nodejs.org/en/) and [Nett
 
 The Swoole framework is released as a [PHP extension (PECL)](https://pecl.php.net/package/swoole) and runs as a PHP CLI application.
 
-
 ### Hello world
 
 ``` php
