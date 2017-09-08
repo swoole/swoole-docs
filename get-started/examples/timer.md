@@ -13,7 +13,7 @@ swoole_timer_tick(2000, function($timer_id){
 // Executes the setted function after specified delay
 swoole_timer_after(3000, function(){
 	echo "after 3000ms\n";
-})
+});
 ```
 
 Swoole provides the async timer like the `setInterval/setTimeout` of Javascript which is in milliseconds.
@@ -22,6 +22,6 @@ Swoole provides the async timer like the `setInterval/setTimeout` of Javascript 
 
 - `swoole_timer_after($time, $callable)` corresponds to the `setTimeout` of Javascript which is called after a specified time
 
-- `swoole_timer_after` and `swoole_timer_tick` return a integer which represents the id of timer
+- `swoole_timer_after` and `swoole_timer_tick` return a integer which represents the id of this timer
 
 - Use `swoole_timer_clear($timer_id)` to clear the timer
