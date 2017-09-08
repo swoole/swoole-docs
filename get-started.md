@@ -1,6 +1,6 @@
 # Get started
 
-Swoole framework is released as a PHP extension \(PECL\) and run as a PHP CLI application.
+The swoole is released as a PHP extension \(PECL\) and run as a PHP CLI application.
 
 ### Installation
 
@@ -8,7 +8,7 @@ Please check the [preparation](/get-started/preparation.md) and [installation gu
 
 ### Hello world
 
-An example of a web server written with Swoole which responds with 'Hello World':
+An example of a web server written with Swoole which responds 'Hello World':
 
 ``` php
 <?php
@@ -26,7 +26,7 @@ $http->on('request', function ($request, $response) {
 $http->start();
 ```
 
-To run the server, put the code into a file called server.php and execute it with php cli:
+To run the server, put the code into a file called server.php and execute it in the cli mode of php:
 
 ``` bash
 $ php server.php
