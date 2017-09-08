@@ -6,7 +6,7 @@
 
 ``` php
 // Create the http server object 
-$http_server = new soole_http_server("127.0.0.1", 9503);
+$http_server = new swoole_http_server("127.0.0.1", 9503);
 
 // Register the event of request
 $http_server->on('request', function($request, $response){
@@ -19,16 +19,16 @@ $http_server->on('request', function($request, $response){
 $http_server->start();
 ```
 
-For http server, the most important task is to handle the request and send the response. You can just register the function for request event. 
+For http server, the most important task is to handle the request and send the response. You can just register the function for event `request`. 
 
-When the new http request comes, the server will call the registered function for request to handle. The swooel will pass two parameters, `$request` and `$response`, in the registered function for request. 
+When the new http request comes, the server will call the function registered for request to handle. The swoole will pass two parameters, `$request` and `$response`, in the registered function. 
 
 The parameter `$request` contains the information about the http request, for example GET/POST data.
 
 The parameter `$response` is handled by swoole to send the data to client. `$response->end($data)` will output the `$data` to the client in the form of html and  close the connection. 
 
 - '0.0.0.0' represents that the server listens all ip addresses.
-- '9501' represents the port that the server listens. If the port has already been used, the swoole would throw a fatal error and stop execution.
+- '9501' represents the port that the server listens at. If the port has already been used, the swoole would throw a fatal error and stop execution.
 
 ### Run program
 
