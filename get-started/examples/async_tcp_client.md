@@ -6,7 +6,7 @@
 
 ``` php
 // Create the asynchronous tcp client object
-$client = new swoole_client(SWOOL_SOCK_TCP, SWOOLE_SOCK_ASYNC);
+$client = new swoole_client(SWOOLE_SOCK_TCP, SWOOLE_SOCK_ASYNC);
 
 // Register the function for the event of connecting server
 $client->on("connect", function($client){

@@ -1,8 +1,8 @@
 # Swoole Async MySQL client
 
-The swoole async MySQL client is a replacement of the other sync MySQL clients: libmysqlclient, mysqlnd, mysqli.
+The swoole contains the swoole async MySQL client. It has realized the protocal of MySQL and is a replacement of the other sync MySQL clients: libmysqlclient, mysqlnd, mysqli.
 
-### Example:
+## Example:
 
 ``` php
 <?php
@@ -38,19 +38,19 @@ $db->connect($server, function ($db, $r) {
 });
 ```
 
-### Events
+## Events
 
 * connect
 
-### Methods:
+## Methods:
 
-#### swoole_mysql->construct()
+### swoole_mysql->construct()
 
-#### swoole_mysql->on($event_name, callable $callback);
+### swoole_mysql->on($event_name, callable $callback);
 
 Register callback function based on event name, current only 'Clost' event is supported.
 
-#### swoole_mysql->connect(array $serverConfig, callable $callback);
+### swoole_mysql->connect(array $serverConfig, callable $callback);
 
 Connect to the remote MySQL server.
 
@@ -71,7 +71,7 @@ $server = array(
 function onConnect(swoole_mysql $db, bool $result);
 ```
 
-#### swoole_mysql->escape(string $str) : string
+### swoole_mysql->escape(string $str) : string
 
 Escape SQL strings to avoid SQL injection attacks.
 
@@ -140,5 +140,3 @@ Rollback the MySQL transaction.
 #### swoole_mysql->close();
 
 Close the MySQL connection.
-
-
