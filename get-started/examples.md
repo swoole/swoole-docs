@@ -1,10 +1,10 @@
 ## Examples
 
-The majority of functions of swoole run in mode of php cli. Please run your code by `php /path/to/your_file.php`. 
+The majority of functions provided by swoole run in cli mode of php. Please run your code by `php /path/to/your_file.php`. 
 
-If there is no output functions(echo, printf, etc) in your code, there is also no output in the screen while the code is in good running and listen the address and port setted. You can connect the server created by client or other tools to test your code.
+If there is no output functions(echo, printf, etc) in your code, there is also no output in the screen while the code is running. You can write code to connect to the server or other tools to test your code.
 
-Try the examples written by swoole and be familiar with swoole:
+Try the examples written by swoole:
 
 - [Create TCP Server](/get-started/examples/tcp_server.md)
 
