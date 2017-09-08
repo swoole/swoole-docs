@@ -26,9 +26,9 @@ $server->on('close', function($server, $fd){
 // Start the server
 $server->start();
 ```
-The code above creates a TCP server, and listens the 127.0.0.1:9501. It implements a simple echo tcp server. When the client connects to this server and sends a string 'hello', the server will reply a string 'Server: hello'.
+The code above creates a TCP server, and listens the 127.0.0.1:9501. It implements a simple echo tcp server. When the client connects to this server and sends a string 'hello', the server will respond with a string 'Server: hello'.
 
-The class `swoole_server` creates the async server by registering the events listening functions. When an event happens, the internal of swoole will call the corresponding function which is registered for this event. 
+The class `swoole_server` creates an async server by registering the events listening functions. When an event happens, the internal of swoole will call the corresponding function which is registered for this event. 
 
 For example, if a tcp connection comes and connects to the tcp server, the swoole will call the function which is registered for event `connect`. If a tcp client sends data to the tcp server, the swoole will recevice the data and call the corresponding function to handle this event. 
 
