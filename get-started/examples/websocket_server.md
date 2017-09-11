@@ -6,7 +6,7 @@
 
 ``` php
 //Create the websocket server object 
-$websocket_server = new swoole_websocket_server("0.0.0.0", 9504);
+$websocket_server = new swoole_websocket_server("0.0.0.0", 9502);
 
 // Register function of the opening connection event
 $websocket_server->on('open', function($websocket_server, $request){
@@ -29,15 +29,15 @@ $websocket_server->on('close', function($websocket_server, $fd){
 $websocket_server->start();
 ```
 
-Websocket server is based on the http server. The client will first send a handshake request to start the WebSockrt handshake process. If the process of handshake successed, the swoole would call the function registered for open event and get the `$request` object. The `$request` object contains the information of GET, Cookie and Http headers. 
+Websocket server is based on the http server. The client will first send a handshake request to start the WebSockrt handshake process. If the process of handshake successed, the swoole would call the function registered for event `open` and get the `$request` object. The `$request` object contains the information of GET, Cookie and Http headers. 
 
-Once the connection has been setted, the client and the server can make the interactive  communication session.
+Once the connection has been setted, the client and the server can make the interactive communication.
 
 - The onMessage function will be called when the client send data to the server
 
-- The server use `$websocket_server->push($fd, $data)` to send data to the client
+- The server uses `$websocket_server->push($fd, $data)` to send data to the client
 
-- The server is able to register the function onHandshake to handle the handshake
+- The server is able to register the function for event `handshake` to handle the handshake
 
 ### Run program
 
@@ -65,4 +65,3 @@ websocket.onerror = function (evt, e) {
 };
 
 ```
-

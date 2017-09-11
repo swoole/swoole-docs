@@ -5,10 +5,10 @@
 `udp_server.php`
 
 ``` php
-// Create the server object which listens the 127.0.0.1:9502 port. Set the server type to SWOOLE_SOCK_UDP
-$server = swoole_server("127.0.0.1", 9502, SWOOLE_PROCESS, SWOOLE_SOCK_UDP);
+// Create the server object which listens at 127.0.0.1:9502. Set the server type to SWOOLE_SOCK_UDP
+$server = new swoole_server("127.0.0.1", 9502, SWOOLE_PROCESS, SWOOLE_SOCK_UDP);
 
-// Register the event of receive data
+// Register callback function for the event `receive data`
 $server->on('Packet', function($server, $data, $clientInfo){
     $server->sendto($clientInfo['address'], $clientInfo['port'], "Server : " . $data);
 });
@@ -17,11 +17,11 @@ $server->on('Packet', function($server, $data, $clientInfo){
 $server->start();
 ```
 
-As UDP server, it is unlike TCP server and  hasn't the concept of connection. When the UDP server has started, the client can send directly the data to the port 9502 which is being listened. Then the UDP server will call the function registered for receiving packet.
+As UDP server, it is unlike TCP server and hasn't the concept of connection. When the UDP server has started, the client can send directly the data to the ip address and port which the server listens at. Then the UDP server will call the function registered for receiving packet.
 
 - `$clientInfo` is the information of client. It is a array which contains the ip address and port of client.
 
-- Call the `$server->sendto($ip, $port, $data)` to send data to client
+- Calling the `$server->sendto($ip, $port, $data)` to send data to client
 
 
 ### Run program 

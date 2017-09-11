@@ -43,7 +43,7 @@ sudo make install  #  install the swoole into the PHP extensions directory
 
 ### Enable swoole
 
-After install the swoole extension to the PHP extensions directory, you will need to adjust php.ini and add an extension=swoole.so line before you can use the extension.
+After installing the swoole extension to the PHP extensions directory, you will need to edit php.ini and add an extension=swoole.so line before you can use the swoole extension.
 
 ```bash
 php -i | grep php.ini                      # check the php.ini file location
@@ -53,19 +53,19 @@ php -m | grep swoole                       # check if the swoole extension has b
 
 ### Configuration paramaters
 
-These configuration are used for enable some feature.
+These configurations are used for enabling some features.
 
 `--enable-swoole-debug` 
 
-Enable the debug logs of swoole, do not enable this in production environment.
+Enable the debug logs of swoole. Don't enable this configuration in production environment.
 
 `--enable-sockets` 
 
-Enable sockets support, it depends on the PHP sockets extension. If this configuration has been enabled, the function swoole_event_add() could add the connection created by the sockets extension to the event loop of swoole. And the function getSocket() depends on the configuration.  
+Enable sockets support. It depends on the PHP sockets extension. If this configuration has been enabled, the function swoole_event_add() could add the connection created by the sockets extension to the event loop of swoole. And the function getSocket() depends on this configuration.  
 
 `--enable-openssl` 
 
-Enable openssl support, it depends on the libssl.so library given by os
+Enable openssl support. It depends on the libssl.so library given by operating system.
 
 `--with-openssl-dir`
 
@@ -73,27 +73,27 @@ Set the path of openssl library, for example:`--with-openssl-dir=/opt/openssl/.`
 
 `--enable-http2`
 
-Enable the support of HTTP2, it depends on nghttp2 library.
+Enable the support of HTTP2. It depends on nghttp2 library.
 
 `--enable-async-redis`
 
-Enable the suppor of async redis client, it depends on hiredis library.
+Enable the support of async redis client. It depends on hiredis library.
 
 `--enable-timewheel`
 
-Enable the support of timewheel, optimize the heartbeat algorithm.
+Enable the support of timewheel and optimize the heartbeat algorithm.
 
-> This is an experimental feature, do not use in production environment
+> This is an experimental feature. Don't use this feature in production environment.
 
 `--enable-mysqlnd`
 
-Enable the support of mysqlnd, for example `swoole_mysql::escapse`
+Enable the support of mysqlnd, for example `swoole_mysql::escapse`.
 
 `--enable-ringbuffer`
 
-Enable the support of ringbuffer memory pool
+Enable the support of ringbuffer memory pool.
 
-> This is an experimental feature, do not use in production environment
+> This is an experimental feature. Don't use this feature in production environment
 
 
-**After in the installation of swoole,  try the [examples](/get-started/examples.md) written by swoole.**
+**After the installation of swoole,  try the [examples](/get-started/examples.md) written by swoole.**

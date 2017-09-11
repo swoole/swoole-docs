@@ -1,17 +1,16 @@
 # Swoole Docs
 
-Swoole is an high-performance network framework uses an event-driven, asynchronous, non-blocking I/O model makes it scalable and efficient. It is written in C language without 3rd party libraries as PHP extension.
+Swoole is an high-performance network framework using an event-driven, asynchronous, non-blocking I/O model which makes it scalable and efficient. It is written in C language without 3rd party libraries as PHP extension.
 
-It enables PHP developers to write high-performance, scalable, concurrent TCP, UDP, Unix Socket, HTTP, WebSocket services with PHP programming language without too much knowledge about non-blocking I/O programming and low-level Linux kernel.
+It enables PHP developers to write high-performance, scalable, concurrent TCP, UDP, Unix Socket, HTTP, WebSocket services in PHP programming language without too much knowledge about non-blocking I/O programming and low-level Linux kernel.
 
-Compare with other Async programming framework or software such as Nginx, Tornado, Node.js, Swoole has the built-in async, multiple threads I/O modules. Developers can use sync or async API to write the applications.
+Compared with other async programming frameworks or softwares such as Nginx, Tornado, Node.js, Swoole has the built-in async, multiple threads I/O modules. Developers can use sync or async API to write the applications.
 
 Swoole PHP network framework enhances the efficiency of R&D team, enable them to focus on the development of innovative products.
 
 Swoole follows the same principle as [Node.js](https://nodejs.org/en/) and [Netty](https://netty.io/), but for PHP.
 
 The Swoole framework is released as a [PHP extension (PECL)](https://pecl.php.net/package/swoole) and runs as a PHP CLI application.
-
 
 ### Hello world
 

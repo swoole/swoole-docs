@@ -35,7 +35,7 @@ $server->on('Close', 'my_onClose');
 $server->start();
 ```
 
-### Get server attributes
+### Get the server attributes
 
 ``` php
 <?php
