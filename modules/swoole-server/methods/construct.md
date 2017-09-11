@@ -39,7 +39,7 @@ The swoole supports the feature of listening on a random port. When the argument
 
 ``` php
 <?php
-$http = new swoole_http_server("0.0.0.0");
+$http = new swoole_http_server("127.0.0.1");
 
 $http->on('request', function ($request, $response) {
     $response->header("Content-Type", "text/html; charset=utf-8");
