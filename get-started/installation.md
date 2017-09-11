@@ -23,7 +23,7 @@ brew install swoole
 
 ##### Download link
 
-You are recommended to download the latest stable version of swoole
+You are recommended to download the latest stable version of swoole. You can download the source code from one of the following the links.
 
 - [https://github.com/swoole/swoole-src/releases](https://github.com/swoole/swoole-src/releases)
 - [http://pecl.php.net/package/swoole](http://pecl.php.net/package/swoole)
