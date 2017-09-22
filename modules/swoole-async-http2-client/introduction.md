@@ -4,7 +4,7 @@ Http2.0 client support stream and multiplexing. Multiple GET or POST request can
 
 Swoole HTTP2 client is based on *nghttp2*, enable this feature when compiling with *--enable-nghttp2*, *--enable-openssl* or *--with-openssl-dir*.
 
-### Example
+## Example
 
 ``` php
 <?php
