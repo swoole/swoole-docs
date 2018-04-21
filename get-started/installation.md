@@ -13,10 +13,13 @@ pecl install swoole
 ```
 ##### MacOS X \(macOS\) users
 
-> It is highly recommended to install Swoole on Mac OS X or macOS systems via homebrew
+> It is highly recommended to install php on Mac OS X or macOS systems via homebrew.
+>
+> And install swoole form PECL
 
 ``` bash
-brew install swoole
+brew install php # or brew install php@7.2 for php 7.2
+pecl install swoole
 ```
 
 #### Building swoole from sources
