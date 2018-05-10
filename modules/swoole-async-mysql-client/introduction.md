@@ -1,6 +1,6 @@
 # Swoole Async MySQL client
 
-The swoole contains the swoole async MySQL client. It has realized the protocal of MySQL and is a replacement of the other sync MySQL clients: libmysqlclient, mysqlnd, mysqli.
+The swoole contains the swoole async MySQL client. It has realized the protocol of MySQL and is a replacement of the other sync MySQL clients: libmysqlclient, mysqlnd, mysqli.
 
 ## Example:
 
