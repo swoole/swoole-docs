@@ -11,6 +11,8 @@
 ``` bash
 pecl install swoole
 ```
+Note: Some Linux distributions do not include the PHP-XML extension in their PHP package and will need to be enabled before using PECL. You can install using `apt-get install php-xml` and you may need to install PHPize to compile Swoole, you can install it using `apt-get install php7.*-dev` or whatever PHP version you are using.
+
 ##### MacOS X \(macOS\) users
 
 > It is highly recommended to install Swoole on Mac OS X or macOS systems via homebrew
