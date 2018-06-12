@@ -15,11 +15,11 @@ Add a user defined child process to the server. The process can be used as monit
 #### Parameter
 
 * `$process` the swoole_process object defined by user
-    - Check [the document of swoole_proccess](/modules/swoole-process/introduction.md)
+    - Check [the document of swoole_process](/modules/swoole-process/introduction.md)
 
 ##### Return
 
-The return value indicates the result of add proccess to swoole server.
+The return value indicates the result of add process to swoole server.
 
 ##### Example:
 
