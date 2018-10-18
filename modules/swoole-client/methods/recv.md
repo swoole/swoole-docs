@@ -1,6 +1,6 @@
 # Swoole TCP/UDP client
 
-## Methods 
+## Methods
 
 ### swoole_client->recv
 
@@ -20,7 +20,7 @@ Receive data from the remote socket.
 
 - `$flags` the configuration of receiving data(Check the predefined constants of class swoole_client)
 
-> If the swoole client has setted the configuration about check of `EOF/Length`, it doesn't need to set the parameter `$size` and `$flags` and the swoole client will return the whole package.
+> If the swoole client has set the configuration about check of `EOF/Length`, it doesn't need to set the parameter `$size` and `$flags` and the swoole client will return the whole package.
 
 #### Return
 

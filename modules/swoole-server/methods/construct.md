@@ -1,6 +1,6 @@
 ## Method
 
-### swoole_server::__construct 
+### swoole_server::__construct
 
 #### Prototype
 
@@ -35,7 +35,7 @@ the swoole_server object
 
 ##### Listen on a random port:
 
-The swoole supports the feature of listening on a random port. When the argument `$port` isn't seted or is `0`, the swoole will choose a random and available port to listen on. You can use `$server->port` to listen on. 
+The swoole supports the feature of listening on a random port. When the argument `$port` isn't seted or is `0`, the swoole will choose a random and available port to listen on. You can use `$server->port` to listen on.
 
 ``` php
 <?php
@@ -50,7 +50,7 @@ $http->start();
 ```
 ##### Listen on a port defined in systemd
 
-The swoole-1.9.7 adds the support for `systemd socket`. The port listened on can be setted by the configuration of systemd.
+The swoole-1.9.7 adds the support for `systemd socket`. The port listened on can be set by the configuration of systemd.
 
 `swoole.socket`
 ``` bash

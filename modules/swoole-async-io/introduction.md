@@ -1,6 +1,6 @@
 # Swoole Async File I/O
 
-The swoole provides the functions of asynchronous file I/O. 
+The swoole provides the functions of asynchronous file I/O.
 
 > The task process in swoole_server is syncing and blocking without using EventLoop, can't benefit from Async I/O.
 
@@ -49,14 +49,14 @@ swoole_async_readfile(__DIR__."/server.php", function($filename, $content) {
 
 Write file in the async way. When the operation of writing content to file finished, the callback registered is callback automatically.
 
-- `$filename` the file path of file. If fail to open this file, the method return false; 
+- `$filename` the file path of file. If fail to open this file, the method return false;
 
 - `$fileContent` the content to write to the file, The max length is 4M.
 
 - `$callback` the callback function triggered when the operation of writing content to file finished.
 
 - `$flags` `FILE_APPEND`: append content to the end of file.
-            If the aio mode setted by `swoole_async_set` is `SWOOLE_AIO_BASE`, the method can't support append content to the end of file and must set the value of `$fileContent` to integer multiples of 4096.
+            If the aio mode set by `swoole_async_set` is `SWOOLE_AIO_BASE`, the method can't support append content to the end of file and must set the value of `$fileContent` to integer multiples of 4096.
 
 Example:
 
@@ -95,13 +95,13 @@ Write file stream in the async way. When the operation of writing content to fil
 
 The difference between this method and `swoole_async_writefile` is that the former writes file by fragment and uses less memory.
 
-- `$offset` The method uses the `$offset` parameter to decide the postion to write file. 
-            If the `$offset` is setted to `-1`, it stands for that it appends content to the end of file.
-            If the aio mode setted by `swoole_async_set` is `SWOOLE_AIO_BASE`, the method can't support append content to the end of file and must set the value of `$content` and `$offset` to integer multiples of 512. Otherwise the call of this method will fail and set the error code to `EINVAL`.
+- `$offset` The method uses the `$offset` parameter to decide the postion to write file.
+            If the `$offset` is set to `-1`, it stands for that it appends content to the end of file.
+            If the aio mode set by `swoole_async_set` is `SWOOLE_AIO_BASE`, the method can't support append content to the end of file and must set the value of `$content` and `$offset` to integer multiples of 512. Otherwise the call of this method will fail and set the error code to `EINVAL`.
 
 ### swoole_async_dns_lookup(string $host, mixed $callback)
 
-Async DNS lookup. The call of this method is non-blocking. 
+Async DNS lookup. The call of this method is non-blocking.
 
 - If the operation of DNS lookup finished, the callback registered is called automatically.
 

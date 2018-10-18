@@ -36,7 +36,7 @@ struct
     char body[0];
 }
 ```
-The configuration designed from the above protocal design
+The configuration designed from the above protocol design
 
 ```php
 $server->set(array(

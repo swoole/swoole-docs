@@ -13,9 +13,9 @@ Trigger a timer tick by interval.
 #### Parameter
 
 * `$duration_ms`	the number of millisecond
-* `$callback`       the callback function called repeatedly with a fixed time delay between each call. The callback will be passed two arguments : 
+* `$callback`       the callback function called repeatedly with a fixed time delay between each call. The callback will be passed two arguments :
                         `$timer_id` : id of timer which can be used to clear this timer using `swoole_timer_clear`
-                        `$param` : the param passed in `swoole_timer_tick` 
+                        `$param` : the param passed in `swoole_timer_tick`
 * `$param`          the param passed to the callback
 
 #### Return
@@ -41,8 +41,8 @@ Trigger a one time callback function in the future.
 #### Parameter
 
 * `$after_duration_ms`	the number of millisecond
-* `$callback`           the callback function called after a setted time. The callback will be passed an arguments : 
-                        `$param` : the param passed in `swoole_timer_tick` 
+* `$callback`           the callback function called after a set time. The callback will be passed an arguments :
+                        `$param` : the param passed in `swoole_timer_tick`
 * `$param`          the param passed to the callback
 
 #### Return

@@ -2,9 +2,9 @@
 
 ### log_level
 
-Set the level of log. 
+Set the level of log.
 
-The log that is inferior to the log_level setted will not be recorded to log file.
+The log that is inferior to the given log_level will not be recorded to log file.
 
 #### Usage
 

@@ -4,20 +4,20 @@
 
 Set the `dispatch_func` to dispatch the connection to the worker process.
 
-The swoole server provides [five types of `dispatch_mode`](/modules/swoole-server/configuration/dispatch_mode.md). If the `dispatch_mode` can't meet your need, you can write C++ function or PHP function to realize customized dispatch strategy. 
+The swoole server provides [five types of `dispatch_mode`](/modules/swoole-server/configuration/dispatch_mode.md). If the `dispatch_mode` can't meet your need, you can write C++ function or PHP function to realize customized dispatch strategy.
 
-#### Usage 
+#### Usage
 
 ```php
 $serv->set(array(
     'dispatch_func' => 'my_dispatch_function',
 ));
 ```
-> Once the `dispatch_func` has been setted, the configuration `dispatch_mode` would not work.
+> Once the `dispatch_func` has been set, the configuration `dispatch_mode` would not work.
 
-> If the function setted by `dispatch_func`, the swoole will result in a fatal error.
+> If the function set by `dispatch_func`, the swoole will result in a fatal error.
 
-> If the data dispatched is more than 8K, `dispatch_func` can get 0-8180 bytes data. 
+> If the data dispatched is more than 8K, `dispatch_func` can get 0-8180 bytes data.
 
 #### PHP function
 

@@ -33,7 +33,7 @@ $client->set(array(
 
 This protocol devides the packet to two parts, head and body. The length of head is fixed. And one of parameter in the head indicates the whole length of the packet. When the server receives this kind of packet, it can control the length of reading from the data stream according to the head.
 
-It is easy to set this kind of protocol in swoole by setting the corresponding parameters. When this kind of protocol is setted, the receive event isn't triggered until the server or client receive a full packet.
+It is easy to set this kind of protocol in swoole by setting the corresponding parameters. When this kind of protocol has been set, the receive event isn't triggered until the server or client receive a full packet.
 
 ```php
 $server->set(array(

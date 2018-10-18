@@ -1,4 +1,4 @@
-## Events and Callback functions 
+## Events and Callback functions
 
 ### onStart
 
@@ -8,12 +8,12 @@ Before the `start` event, the swoole server has proceeded the below operations:
 
 - Create the manager process
 - Create the worker process
-- Listen on the setted TCP/UDP Port
+- Listen on the set TCP/UDP Port
 - Listen on the timer
 
 After the `start` event, the reactor will receive event and the client can connect the server
 
-In the callback function registered for `start`, it only allows to log record and modify the name of process. 
+In the callback function registered for `start`, it only allows to log record and modify the name of process.
 
 The event `start` and `workerstart` happen concurrently in different processes and have no precedence.
 

@@ -2,7 +2,7 @@
 
 ### open_http2_protocol
 
-Enable the process of http2 protocal.
+Enable the process of http2 protocol.
 
 This configuration needs to compile swoole with `--enable-http2`
 

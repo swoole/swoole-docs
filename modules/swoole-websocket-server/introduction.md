@@ -36,6 +36,6 @@ $server->start();
 
 * [Common Problems](/modules/swoole-websocket-server/common-problems.md)
 
-> If the swoole_websocket_server has been setted the callback function of event `request`, it can be used as Http server.
+> If the swoole_websocket_server has been set the callback function of event `request`, it can be used as Http server.
 
-> If the swoole_websocket_server hasn't been setted the callback function of event `request` and received http request, it would repond http 400 error.
+> If the swoole_websocket_server hasn't been set the callback function of event `request` and received http request, it would repond http 400 error.

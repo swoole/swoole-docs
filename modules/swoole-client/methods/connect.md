@@ -1,6 +1,6 @@
 # Swoole TCP/UDP client
 
-## Methods 
+## Methods
 
 ### swoole_client->connect
 
@@ -19,7 +19,7 @@ Connect to the remote TCP/UDP port.
 * `$host`	  the ip address the client connects to
 * `$port`     the port the client connects to
 * `$timeout`  the timeout(second) of connect/send/recv, the dafault value is 0.1s
-* `$flag`     if the type of client is UDP, the `$flag` means if to enable the configuration `udp_connect`. If the configuration `udp_connect` is enabled, the client will only receive the data from specified `ip:port`. If the type of client is TCP and the `$flag` is setted to `1`, it must use `swoole_client_select` to check the connection status before `send/recv`.  
+* `$flag`     if the type of client is UDP, the `$flag` means if to enable the configuration `udp_connect`. If the configuration `udp_connect` is enabled, the client will only receive the data from specified `ip:port`. If the type of client is TCP and the `$flag` is set to `1`, it must use `swoole_client_select` to check the connection status before `send/recv`.
 
 > `$timeout` is noneffective for asynchronous client.
 

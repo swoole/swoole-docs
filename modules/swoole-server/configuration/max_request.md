@@ -4,7 +4,7 @@
 
 the number of max request the worker process could receive.
 
-The dafault value of `max_request` is 0 which means there is no limit of the max request. If the `max_request` is setted to some number, the worker process will exit and release all the memory amd resouce occupied by this process after receiving the `max_request` request. And then, the manager will respawn a new worker process.
+The dafault value of `max_request` is 0 which means there is no limit of the max request. If the `max_request` is set to some number, the worker process will exit and release all the memory amd resouce occupied by this process after receiving the `max_request` request. And then, the manager will respawn a new worker process.
 
 This parameter is to resolve the problem of nonlocalizable and slow memory leak.
 
@@ -16,8 +16,8 @@ This parameter is to resolve the problem of nonlocalizable and slow memory leak.
 <?php
 $serv = new swoole_server("127.0.0.1", 9501);
 $serv->set(array(
-            'worker_num' => 2,    
-            'max_request' => 3,  
+            'worker_num' => 2,
+            'max_request' => 3,
             'dispatch_mode'=>3,
 ));
 

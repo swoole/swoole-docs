@@ -10,15 +10,15 @@ mixed swoole_server->addListener(string $host, int $port, $type = SWOOLE_SOCK_TC
 
 #### Illustration
 
-Add more listening IP or port for the server. The connection information can be acccessed by `$server->connection_info()` when the server has started. By the connection information, you can distinguish the source port of the connection. 
+Add more listening IP or port for the server. The connection information can be acccessed by `$server->connection_info()` when the server has started. By the connection information, you can distinguish the source port of the connection.
 
 #### Parameter
 
 * `$host`: the ip address of the server
-* `$port`: the port of the server 
+* `$port`: the port of the server
     - it needs root privileges if the port is litte than 1024
-    - the parameter `$port` will be ignored when the parameter `$sock_type` is setted to `SWOOLE_UNIX_DGRAM` or `SWOOLE_UNIX_STREAM`
-    - if the parameter `$port` is setted to `0`, the swoole server would use a random and available port
+    - the parameter `$port` will be ignored when the parameter `$sock_type` is set to `SWOOLE_UNIX_DGRAM` or `SWOOLE_UNIX_STREAM`
+    - if the parameter `$port` is set to `0`, the swoole server would use a random and available port
 
 * `$sock_type`: the socket type of the server:
     * SWOOLE_SOCK_TCP: TCP
@@ -43,7 +43,7 @@ $server->addlistener("0.0.0.0", 9504, SWOOLE_SOCK_UDP);
 //UnixSocket Stream
 $server->addlistener("/var/run/myserv.sock", 0, SWOOLE_UNIX_STREAM);
 //TCP + SSL
-$server->addlistener("127.0.0.1", 9502, SWOOLE_SOCK_TCP | SWOOLE_SSL); 
+$server->addlistener("127.0.0.1", 9502, SWOOLE_SOCK_TCP | SWOOLE_SSL);
 //Listen on a random port
 $port = $server->addListener("0.0.0.0", 0, SWOOLE_SOCK_TCP);
 echo $port->port;

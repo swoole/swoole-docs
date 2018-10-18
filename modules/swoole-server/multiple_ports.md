@@ -6,13 +6,13 @@ The swoole supports listening on multiple ports and analyzing multiple protocols
 
 You can set different protocols and callback functions on different ports. SSL/TLS can also enabled on certain port.
 
-- If the listening on new port hasn't setted the protocal, it will be in the no protocal mode.
+- If the listening on new port does not have protocol set, it will be in the no protocol mode.
 
-- If the listening on new port hasn't setted the callback functions, it will use the callback functions of `$server`.
+- If the listening on new port does not have the callback functions set, it will use the callback functions of `$server`.
 
 - The return of `$server->listen` is object of `swoole_server_port`
 
-- The callback functions setted for different ports still run in same worker process.
+- The callback functions set for different ports still run in same worker process.
 
 #### Listen on new port
 
@@ -65,9 +65,9 @@ The swoole_server_port object can only set part of [the configurations list of s
 
 - If the swoole_server_port object hasn't set any configuration, it will use the configurations of the main swoole server object.
 
-- If the main server object is instance of `swoole_http_server` or `swoole_websocket_server` and the swoole_server_port object hasn't setted the configuration about protocal, the swoole_server_port is setted to analyze `http` or `websocket` protocol automatically and can't be setted the custom callback funtion of event `receive`.
+- If the main server object is instance of `swoole_http_server` or `swoole_websocket_server` and the swoole_server_port object hasn't been set the configuration about protocol, the swoole_server_port is set to analyze `http` or `websocket` protocol automatically and the custom callback function of event `receive` can not be set.
 
-- If the main server object is instance of `swoole_http_server` or `swoole_websocket_server` and the swoole_server_port object has setted some custom configurations, the swoole_server_port object would change to analyze TCP protocol. If you still want to set the swoole_server_port object to analyze the `Http/WebSocket` protocol, it needs to add `open_http_protocol => true` or `open_websocket_protocol => true`
+- If the main server object is instance of `swoole_http_server` or `swoole_websocket_server` and the swoole_server_port object has been set some custom configurations, the swoole_server_port object would change to analyze TCP protocol. If you still want to set the swoole_server_port object to analyze the `Http/WebSocket` protocol, it needs to add `open_http_protocol => true` or `open_websocket_protocol => true`
 
 Available Configurations for swoole_server_port object:
 
@@ -111,7 +111,7 @@ For UDP server:
 
 - onReceive
 
-The below callback functions can only be setted by swoole_server object.
+The below callback functions can only be set by swoole_server object.
 
 - onStart
 
@@ -135,12 +135,12 @@ The below callback functions can only be setted by swoole_server object.
 
 #### Q&A
 
-The `swoole_http_server` class and `swoole_websocket_server` class inherit the `swoole_server` class. The swoole_server object can't call `listen` method to create swoole_server_port object of Http or Websocket server. 
+The `swoole_http_server` class and `swoole_websocket_server` class inherit the `swoole_server` class. The swoole_server object can't call `listen` method to create swoole_server_port object of Http or Websocket server.
 
 In this situation, you can create the swoole_http_server object and then call `listen` method to create tcp server.
 
 ```php
-$http_server=new swoole_http_server('0.0.0.0',9998); 
+$http_server=new swoole_http_server('0.0.0.0',9998);
 $http_server->set(array('xxx'=>'yyy'));
 $http_server->on('request','request');
 $tcp_server=$http_server->addListener('0.0.0.0',9999,SWOOLE_SOCK_TCP);

@@ -2,7 +2,7 @@
 
 ### open_http_protocol
 
-Enable the process of http protocal.
+Enable the process of http protocol.
 
 Once this configuration has enabled, the callback function `onReceive` will receive a whole http package.
 
